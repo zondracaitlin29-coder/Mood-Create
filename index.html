@@ -7,937 +7,600 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Creator Tool">
-<meta name="description" content="Zondra's Mood-Based Daily Creator Tool">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAX00lEQVR4nO3d+ZvddXnH4Wcmq6AJ+46sgkIRFRQqoihCxUq1YN29QDZFKGEmYTJZCQlJJoFJSFXcgkVAqlKoVC0WhWLRFhdEpIAgCBFkUZaEJZBtpj/U2BizzGS+cz7nnOe+/wB5J9clzyufM5y0RIO5Z8bxvaU3AMC67Dvl6pbSG/qqroc69gA0unqNgrob5egD0KzqKQbqYoijD0A2pWOg6D/c4Qcgu1IhUPN/qKMPAOtWyxhordU/KMLxB4ANqeWdrElpOPwA0D+D/RowqP/jDj8ADMxghcCgfQTg+APAwA3WPR2UAHD8AaA6g3FXK31WcPgBYHBV9ZFAZS8Ajj8ADL6q7m0lAeD4A0DtVHF3BxwAjj8A1N5A7++AAsDxB4ByBnKHNzkAHH8AKG9T7/EmBYDjDwD1Y1Pucr8DwPEHgPrT3/vcrwBw/AGgfvXnTtf0bwMEAOpDnwPAn/4BoP719V73KQAcfwBoHH252xsNAMcfABrPxu63nwEAgIQ2GAD+9A8AjWtDd9wLAAAktN4A8Kd/AGh867vn6wwAxx8Amse67rqPAAAgIQEAAAn9WQB4/geA5rP2ffcCAAAJ/UkA+NM/ADSvNe+8FwAASEgAAEBCfwwAz/8A0PxW33svAACQkAAAgIRaIjz/A0A2XgAAICEBAAAJCQAASEgAAEBCrX4AEADy8QIAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIRa951ydUvpEQBAbXkBAICEBAAAJCQAACAhAQAACbXeM+P43tIjAIDa8gIAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIRali9e1Ft6BABQW14AACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhoaOkBUKWf3npbnHLamaVn0GS2227buP66b5SeAZXyAgAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAYCOOOvKtpSdA5QQAwAYc8oaDo73tzNIzoHICAGA9dt1l55g7Z0YMGTKk9BSonAAAWIfNN9ssFsyfG6NHjSo9BQaFAABYS2tra8yeNS323HP30lNg0AgAgLWcecZp8ebDDys9AwZVy/LFi3pLjwAa16yu7vj6VdeUnlGZY95xVMyeOa30DBh0XgCATXb1Ndc21fHfb79XxrSpE0rPgJoQAMAmufVnP4/Zc+aV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">
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 <title>Zondra's Creator Tool</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
 :root {
-  --beige:      #FAF0E6;
-  --beige-mid:  #F2E4D0;
-  --beige-deep: #E8D5BB;
-  --blush:      #D98353;
-  --blush-light:#F2C4A0;
-  --blush-pale: #FDF0E6;
-  --brown:      #2A2318;
-  --brown-mid:  #5C4A32;
-  --muted:      #9B8878;
-  --card:       #FFFCF8;
-  --border:     #EAD9C8;
-  --green:      #6BAE75;
-  --amber:      #D4A843;
-  --red:        #C96B5A;
+  --beige:#FAF0E6; --beige-mid:#F2E4D0; --beige-deep:#E8D5BB;
+  --blush:#D98353; --blush-light:#F2C4A0; --blush-pale:#FDF0E6;
+  --brown:#2A2318; --brown-mid:#5C4A32; --muted:#9B8878;
+  --card:#FFFCF8; --border:#EAD9C8;
+  --green:#6BAE75; --amber:#D4A843;
 }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+body { font-family:'DM Sans',sans-serif; background:var(--beige); color:var(--brown); min-height:100vh; }
+#offlineBanner { display:none; background:var(--blush); color:#fff; text-align:center; padding:8px; font-size:0.78rem; font-weight:600; }
+.screen { display:none; min-height:100vh; max-width:480px; margin:0 auto; flex-direction:column; }
+.screen.active { display:flex; }
 
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+/* MOOD */
+#moodScreen { background:var(--brown); }
+.mood-top { padding:44px 26px 24px; }
+.wordmark { font-family:'Syne',serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--blush-light); margin-bottom:28px; display:flex; align-items:center; gap:8px; }
+.wordmark::before { content:''; display:inline-block; width:20px; height:2px; background:var(--blush); border-radius:2px; }
+.mood-date { font-size:0.78rem; color:var(--muted); margin-bottom:10px; font-style:italic; }
+.mood-h { font-family:'Syne',serif; font-size:2.1rem; line-height:1.12; font-weight:800; color:var(--beige); margin-bottom:10px; }
+.mood-h em { color:var(--blush); font-style:normal; }
+.mood-sub { font-size:0.9rem; color:#9B8878; line-height:1.65; }
+.streak-row { margin:24px 26px 0; background:rgba(250,240,230,0.06); border:1px solid rgba(250,240,230,0.12); border-radius:14px; padding:14px 18px; display:flex; align-items:center; gap:12px; }
+.streak-fire { font-size:1.5rem; flex-shrink:0; }
+.streak-txt { font-size:0.83rem; color:var(--beige); line-height:1.45; }
+.streak-txt strong { color:var(--blush-light); }
+.mood-cards { padding:22px 26px 50px; display:flex; flex-direction:column; gap:12px; }
+.mood-card { border-radius:18px; padding:20px 18px; cursor:pointer; transition:transform 0.18s; display:flex; align-items:center; gap:15px; border:none; text-align:left; width:100%; }
+.mood-card:active { transform:scale(0.97); }
+.mc-high { background:linear-gradient(135deg,#7BC47F,#5A9E5F); }
+.mc-med { background:linear-gradient(135deg,#E8B96A,#C99540); }
+.mc-low { background:linear-gradient(135deg,#D98353,#BC6535); }
+.mood-emoji { font-size:2rem; flex-shrink:0; }
+.mood-info h3 { font-family:'Syne',serif; font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:3px; }
+.mood-info p { font-size:0.8rem; color:rgba(255,255,255,0.82); line-height:1.4; }
 
-body {
-  font-family: 'DM Sans', Georgia, sans-serif;
-  background: var(--beige);
-  color: var(--brown);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+/* ACTIONS */
+#actionsScreen { background:var(--beige); }
+.act-hdr { padding:18px 22px 14px; border-bottom:1px solid var(--border); background:var(--card); position:sticky; top:0; z-index:10; }
+.act-meta { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+.pip { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.pip-high { background:var(--green); } .pip-med { background:var(--amber); } .pip-low { background:var(--blush); }
+.act-meta-txt { font-size:0.72rem; color:var(--muted); font-weight:500; }
+.act-title { font-family:'Syne',serif; font-size:1.25rem; font-weight:800; color:var(--brown); line-height:1.2; margin-bottom:12px; }
+.prog-row { display:flex; align-items:center; gap:10px; }
+.prog-track { flex:1; height:5px; background:var(--beige-deep); border-radius:3px; overflow:hidden; }
+.prog-fill { height:100%; background:linear-gradient(90deg,var(--blush-light),var(--blush)); border-radius:3px; transition:width 0.35s; }
+.prog-lbl { font-size:0.72rem; color:var(--muted); font-weight:600; white-space:nowrap; }
+.act-body { padding:18px 18px 110px; flex:1; overflow-y:auto; }
 
-/* Offline banner */
-#offlineBanner {
-  display: none;
-  background: var(--blush); color: #fff;
-  text-align: center; padding: 8px;
-  font-size: 0.78rem; font-weight: 600;
-}
+.prod-block { margin-bottom:28px; }
+.prod-hdr { display:flex; align-items:center; gap:9px; margin-bottom:13px; padding-bottom:9px; border-bottom:1.5px solid var(--border); }
+.prod-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.dot-vault { background:#9B59B6; } .dot-inbox { background:var(--blush); } .dot-nle { background:#6BAE75; } .dot-tiktok { background:#E91E63; }
+.prod-name { font-family:'Syne',serif; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:var(--muted); }
+.prod-goal { margin-left:auto; font-size:0.7rem; color:var(--blush); font-weight:600; }
 
-.screen { display: none; min-height: 100vh; max-width: 480px; margin: 0 auto; }
-.screen.active { display: flex; flex-direction: column; }
+.act-card { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:16px 14px; margin-bottom:10px; cursor:pointer; display:flex; gap:13px; align-items:flex-start; transition:all 0.2s; }
+.act-card.done { background:#F5FBF5; border-color:#C8E6C9; opacity:0.72; }
+.act-card:active { transform:scale(0.985); }
+.chk { width:22px; height:22px; border-radius:50%; border:2px solid var(--border); flex-shrink:0; display:flex; align-items:center; justify-content:center; background:var(--beige); font-size:13px; font-weight:900; margin-top:1px; color:transparent; transition:all 0.2s; }
+.done .chk { background:var(--green); border-color:var(--green); color:#fff; }
+.act-inner { flex:1; min-width:0; }
+.plat { display:inline-block; padding:2px 8px; border-radius:5px; font-size:0.64rem; font-weight:700; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:6px; }
+.p-fb { background:#E8F0FE; color:#1565C0; } .p-wa { background:#E8F5E9; color:#2E7D32; }
+.p-threads { background:#F3E5F5; color:#6A1B9A; } .p-tiktok { background:#FCE4EC; color:#AD1457; }
+.p-pinterest { background:#FFEBEE; color:#B71C1C; } .p-all { background:var(--blush-pale); color:var(--blush); }
+.act-ttl { font-size:0.93rem; font-weight:600; color:var(--brown); margin-bottom:5px; line-height:1.35; }
+.done .act-ttl { text-decoration:line-through; color:var(--muted); }
+.act-desc { font-size:0.8rem; color:var(--muted); line-height:1.55; }
+.act-time { font-size:0.68rem; color:var(--muted); font-weight:600; margin-top:7px; }
+.act-time::before { content:'⏱ '; }
 
-/* ── MOOD SCREEN ────────────────────────────── */
-#moodScreen { background: var(--brown); }
+.script-btn { margin-top:10px; padding:7px 11px; background:var(--blush-pale); border:1px dashed var(--blush-light); border-radius:8px; font-size:0.76rem; color:var(--blush); font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; width:100%; text-align:left; }
+.script-box { display:none; margin-top:8px; padding:12px; background:#FFFAF5; border-left:3px solid var(--blush); border-radius:0 8px 8px 0; font-size:0.78rem; color:var(--brown-mid); line-height:1.65; white-space:pre-wrap; }
+.script-box.open { display:block; }
+.copy-btn { display:inline-flex; align-items:center; gap:5px; margin-top:10px; padding:7px 12px; background:var(--brown); color:#fff; border:none; border-radius:7px; font-size:0.74rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background 0.2s; }
+.copy-btn.copied { background:var(--green); }
 
-.mood-top {
-  padding: 44px 26px 28px;
-  background: var(--brown);
-}
-
-.app-wordmark {
-  font-family: 'Syne', serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--blush-light);
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.app-wordmark::before {
-  content: '';
-  display: inline-block;
-  width: 20px; height: 2px;
-  background: var(--blush);
-  border-radius: 2px;
-}
-
-.mood-date {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 400;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-.mood-headline {
-  font-family: 'Syne', serif;
-  font-size: 2.1rem;
-  line-height: 1.12;
-  font-weight: 800;
-  color: var(--beige);
-  margin-bottom: 10px;
-  letter-spacing: -0.5px;
-}
-.mood-headline em {
-  color: var(--blush);
-  font-style: normal;
-}
-
-.mood-sub {
-  font-size: 0.9rem;
-  color: #9B8878;
-  line-height: 1.65;
-  margin-bottom: 0;
-}
-
-/* Streak */
-.streak-row {
-  margin: 24px 26px 0;
-  background: rgba(250,240,230,0.06);
-  border: 1px solid rgba(250,240,230,0.12);
-  border-radius: 14px;
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.streak-fire { font-size: 1.5rem; flex-shrink: 0; }
-.streak-txt {
-  font-size: 0.83rem;
-  color: var(--beige);
-  line-height: 1.45;
-}
-.streak-txt strong { color: var(--blush-light); }
-
-/* Mood cards */
-.mood-cards {
-  padding: 22px 26px 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.mood-card {
-  border-radius: 18px;
-  padding: 20px 18px;
-  cursor: pointer;
-  transition: transform 0.18s;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border: none;
-  text-align: left;
-  width: 100%;
-}
-.mood-card:active { transform: scale(0.97); }
-
-.mood-card.high  { background: linear-gradient(135deg, #7BC47F 0%, #5A9E5F 100%); }
-.mood-card.medium { background: linear-gradient(135deg, #E8B96A 0%, #C99540 100%); }
-.mood-card.low   { background: linear-gradient(135deg, #D98353 0%, #BC6535 100%); }
-
-.mood-emoji { font-size: 2rem; flex-shrink: 0; }
-.mood-info h3 {
-  font-family: 'Syne', serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 3px;
-}
-.mood-info p {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.4;
-}
-
-/* ── ACTIONS SCREEN ─────────────────────────── */
-#actionsScreen { background: var(--beige); }
-
-.act-header {
-  padding: 18px 22px 14px;
-  border-bottom: 1px solid var(--border);
-  background: var(--card);
-  position: sticky; top: 0; z-index: 10;
-}
-.act-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 7px;
-}
-.mood-pip {
-  width: 8px; height: 8px;
-  border-radius: 50%; flex-shrink: 0;
-}
-.mood-pip.high   { background: var(--green); }
-.mood-pip.medium { background: var(--amber); }
-.mood-pip.low    { background: var(--blush); }
-
-.act-meta-txt {
-  font-size: 0.72rem;
-  color: var(--muted);
-  font-weight: 500;
-}
-.act-title {
-  font-family: 'Syne', serif;
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--brown);
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-.prog-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.prog-track {
-  flex: 1; height: 5px;
-  background: var(--beige-deep);
-  border-radius: 3px; overflow: hidden;
-}
-.prog-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--blush-light), var(--blush));
-  border-radius: 3px;
-  transition: width 0.35s ease;
-}
-.prog-label {
-  font-size: 0.72rem;
-  color: var(--muted);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.act-body {
-  padding: 18px 18px 110px;
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* Product block */
-.prod-block { margin-bottom: 30px; }
-.prod-head {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 13px;
-  padding-bottom: 9px;
-  border-bottom: 1.5px solid var(--border);
-}
-.prod-dot {
-  width: 9px; height: 9px;
-  border-radius: 50%; flex-shrink: 0;
-}
-.prod-dot.vault   { background: #9B59B6; }
-.prod-dot.inbox   { background: var(--blush); }
-.prod-dot.nle     { background: #6BAE75; }
-.prod-name {
-  font-family: 'Syne', serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--muted);
-}
-.prod-goal {
-  margin-left: auto;
-  font-size: 0.7rem;
-  color: var(--blush);
-  font-weight: 600;
-}
-
-/* Action card */
-.act-card {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: 14px;
-  padding: 16px 14px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
-  display: flex;
-  gap: 13px;
-  align-items: flex-start;
-}
-.act-card.done {
-  background: #F5FBF5;
-  border-color: #C8E6C9;
-  opacity: 0.72;
-}
-.act-card:active { transform: scale(0.985); }
-
-.chk {
-  width: 22px; height: 22px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-  flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.2s;
-  background: var(--beige);
-  font-size: 11px;
-  margin-top: 1px;
-  color: transparent;
-}
-.act-card.done .chk {
-  background: var(--green);
-  border-color: var(--green);
-  color: #fff;
-}
-
-.act-inner { flex: 1; min-width: 0; }
-
-.plat-tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 5px;
-  font-size: 0.64rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-bottom: 6px;
-}
-.p-fb        { background: #E8F0FE; color: #1565C0; }
-.p-wa        { background: #E8F5E9; color: #2E7D32; }
-.p-threads   { background: #F3E5F5; color: #6A1B9A; }
-.p-tiktok    { background: #FCE4EC; color: #AD1457; }
-.p-pinterest { background: #FFEBEE; color: #B71C1C; }
-.p-all       { background: var(--blush-pale); color: var(--blush); }
-
-.act-title-txt {
-  font-size: 0.93rem;
-  font-weight: 600;
-  color: var(--brown);
-  margin-bottom: 5px;
-  line-height: 1.35;
-}
-.act-card.done .act-title-txt {
-  text-decoration: line-through;
-  color: var(--muted);
-}
-.act-desc {
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1.55;
-}
-.act-time {
-  font-size: 0.68rem;
-  color: var(--muted);
-  font-weight: 600;
-  margin-top: 7px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.act-time::before { content: '⏱'; font-size: 0.72rem; }
-
-.script-btn {
-  margin-top: 10px;
-  padding: 7px 11px;
-  background: var(--blush-pale);
-  border: 1px dashed var(--blush-light);
-  border-radius: 8px;
-  font-size: 0.76rem;
-  color: var(--blush);
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-family: 'DM Sans', sans-serif;
-  width: 100%;
-  text-align: left;
-}
-.script-box {
-  display: none;
-  margin-top: 8px;
-  padding: 12px;
-  background: #FFFAF5;
-  border-left: 3px solid var(--blush);
-  border-radius: 0 8px 8px 0;
-  font-size: 0.78rem;
-  color: var(--brown-mid);
-  line-height: 1.65;
-  white-space: pre-wrap;
-}
-.script-box.open { display: block; }
+/* TikTok card */
+.tk-card { background:linear-gradient(135deg,#1a1a2e,#16213e); border-radius:14px; padding:18px 16px; margin-bottom:10px; border:1.5px solid rgba(233,30,99,0.2); }
+.tk-lbl { font-size:0.64rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#E91E63; margin-bottom:10px; }
+.tk-title { font-family:'Syne',serif; font-size:1rem; font-weight:700; color:#fff; margin-bottom:8px; line-height:1.3; }
+.tk-brand { font-size:0.72rem; color:rgba(233,30,99,0.7); margin-bottom:12px; font-weight:600; }
+.tk-section-lbl { font-size:0.72rem; color:rgba(255,255,255,0.4); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; }
+.tk-hook { font-size:0.83rem; color:rgba(255,255,255,0.9); margin-bottom:14px; line-height:1.5; font-style:italic; }
+.tk-step { display:flex; gap:10px; align-items:flex-start; margin-bottom:8px; }
+.tk-num { width:20px; height:20px; border-radius:50%; background:#E91E63; color:#fff; font-size:9px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+.tk-step-txt { font-size:0.8rem; color:rgba(255,255,255,0.82); line-height:1.5; }
+.tk-step-txt strong { color:#fff; display:block; margin-bottom:1px; }
+.tk-tip { font-size:0.78rem; color:rgba(255,255,255,0.55); line-height:1.5; margin-top:12px; }
+.tk-copy { display:inline-flex; align-items:center; gap:5px; margin-top:12px; padding:8px 14px; background:#E91E63; color:#fff; border:none; border-radius:7px; font-size:0.74rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; }
+.tk-copy.copied { background:var(--green); }
 
 /* Bottom bar */
-.btm-bar {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  padding: 12px 18px 22px;
-  display: flex;
-  gap: 10px;
-}
-.btn {
-  border: none;
-  border-radius: 10px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.15s;
-  font-size: 0.88rem;
-}
-.btn:active { transform: scale(0.97); }
-.btn-primary {
-  background: var(--blush);
-  color: #fff;
-  padding: 14px;
-  flex: 1;
-}
-.btn-back {
-  background: var(--beige-deep);
-  color: var(--brown-mid);
-  padding: 14px 18px;
-}
+.btm-bar { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; max-width:480px; background:var(--card); border-top:1px solid var(--border); padding:12px 18px 22px; display:flex; gap:10px; }
+.btn { border:none; border-radius:10px; font-family:'DM Sans',sans-serif; font-weight:600; cursor:pointer; transition:transform 0.15s; font-size:0.88rem; }
+.btn:active { transform:scale(0.97); }
+.btn-primary { background:var(--blush); color:#fff; padding:14px; flex:1; }
+.btn-back { background:var(--beige-deep); color:var(--brown-mid); padding:14px 18px; }
 
-/* ── WIN SCREEN ─────────────────────────────── */
-#winScreen {
-  background: var(--brown);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 50px 28px;
-}
-.win-icon { font-size: 3.5rem; margin-bottom: 20px; }
-.win-h {
-  font-family: 'Syne', serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--beige);
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-.win-h em { color: var(--blush); font-style: normal; }
-.win-sub {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 30px;
-  max-width: 320px;
-}
-.win-box {
-  background: rgba(250,240,230,0.06);
-  border: 1px solid rgba(250,240,230,0.12);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 30px;
-  width: 100%;
-  max-width: 300px;
-}
-.win-num {
-  font-family: 'Syne', serif;
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--blush-light);
-  line-height: 1;
-}
-.win-lbl {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 5px;
-}
-.btn-win {
-  background: var(--blush);
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-}
+/* WIN */
+#winScreen { background:var(--brown); align-items:center; justify-content:center; text-align:center; padding:50px 28px; }
+.win-icon { font-size:3.5rem; margin-bottom:20px; }
+.win-h { font-family:'Syne',serif; font-size:2rem; font-weight:800; color:var(--beige); line-height:1.15; margin-bottom:12px; }
+.win-h em { color:var(--blush); font-style:normal; }
+.win-sub { font-size:0.9rem; color:var(--muted); line-height:1.65; margin-bottom:30px; }
+.win-box { background:rgba(250,240,230,0.06); border:1px solid rgba(250,240,230,0.12); border-radius:16px; padding:24px; margin-bottom:30px; width:100%; max-width:300px; }
+.win-num { font-family:'Syne',serif; font-size:3.5rem; font-weight:800; color:var(--blush-light); line-height:1; }
+.win-lbl { font-size:0.8rem; color:var(--muted); margin-top:5px; }
+.btn-win { background:var(--blush); color:#fff; padding:16px 40px; border-radius:12px; font-size:0.95rem; font-weight:700; border:none; cursor:pointer; font-family:'DM Sans',sans-serif; }
 </style>
 </head>
 <body>
+<div id="offlineBanner">You are offline — app still works fully</div>
 
-<div id="offlineBanner">📵 You're offline — app still works fully</div>
-
-<!-- ══ SCREEN 1: MOOD ══ -->
 <div class="screen active" id="moodScreen">
   <div class="mood-top">
-    <div class="app-wordmark">Zondra's Creator Tool</div>
-    <div class="mood-date" id="todayDate"></div>
-    <div class="mood-headline">Good <em id="greeting"></em>,<br>Zondra.</div>
-    <p class="mood-sub">Pick your energy today and I'll give you the right actions — no pressure, no guilt.</p>
+    <div class="wordmark">Zondra's Creator Tool</div>
+    <div class="mood-date" id="todayDate">Loading...</div>
+    <div class="mood-h">Good <em id="greeting">day</em>,<br>Zondra.</div>
+    <p class="mood-sub">Pick your energy today and I'll give you the right actions.</p>
   </div>
-
   <div class="streak-row">
     <div class="streak-fire">🔥</div>
-    <div class="streak-txt">
-      <strong id="streakTxt">0 day streak</strong><br>
-      <span id="streakSub">Start today — every action counts.</span>
-    </div>
+    <div class="streak-txt"><strong id="streakTxt">No streak yet</strong><br><span id="streakSub">Start today — every action counts.</span></div>
   </div>
-
   <div class="mood-cards">
-    <button class="mood-card high" onclick="pickMood('high')">
+    <button class="mood-card mc-high" onclick="pickMood('high')">
       <div class="mood-emoji">⚡</div>
-      <div class="mood-info">
-        <h3>High Energy</h3>
-        <p>I have time and I'm ready — give me the full set.</p>
-      </div>
+      <div class="mood-info"><h3>High Energy</h3><p>I have time and I'm ready — give me the full set.</p></div>
     </button>
-    <button class="mood-card medium" onclick="pickMood('medium')">
+    <button class="mood-card mc-med" onclick="pickMood('medium')">
       <div class="mood-emoji">🌤</div>
-      <div class="mood-info">
-        <h3>Medium Energy</h3>
-        <p>A couple of focused things — something meaningful.</p>
-      </div>
+      <div class="mood-info"><h3>Medium Energy</h3><p>A couple of focused things — something meaningful.</p></div>
     </button>
-    <button class="mood-card low" onclick="pickMood('low')">
+    <button class="mood-card mc-low" onclick="pickMood('low')">
       <div class="mood-emoji">🌿</div>
-      <div class="mood-info">
-        <h3>Low Energy</h3>
-        <p>My daughter needs me or I'm tired — one small thing.</p>
-      </div>
+      <div class="mood-info"><h3>Low Energy</h3><p>My daughter needs me or I am tired — one small thing.</p></div>
     </button>
   </div>
 </div>
 
-<!-- ══ SCREEN 2: ACTIONS ══ -->
 <div class="screen" id="actionsScreen">
-  <div class="act-header">
-    <div class="act-meta">
-      <div class="mood-pip" id="moodPip"></div>
-      <span class="act-meta-txt" id="actMeta"></span>
-    </div>
+  <div class="act-hdr">
+    <div class="act-meta"><div class="pip" id="moodPip"></div><span class="act-meta-txt" id="actMeta"></span></div>
     <div class="act-title" id="actTitle"></div>
     <div class="prog-row">
       <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
-      <span class="prog-label" id="progLabel">0 done</span>
+      <span class="prog-lbl" id="progLbl">0 done</span>
     </div>
   </div>
   <div class="act-body" id="actBody"></div>
   <div class="btm-bar">
-    <button class="btn btn-back" onclick="goBack()">← Back</button>
-    <button class="btn btn-primary" onclick="dayDone()">Done for today ✓</button>
+    <button class="btn btn-back" onclick="goBack()">Back</button>
+    <button class="btn btn-primary" onclick="dayDone()">Done for today</button>
   </div>
 </div>
 
-<!-- ══ SCREEN 3: WIN ══ -->
 <div class="screen" id="winScreen">
   <div class="win-icon">✨</div>
   <div class="win-h">Day <em>done.</em><br>You showed up.</div>
-  <p class="win-sub">Every action today builds trust, visibility and momentum toward your first sale. It adds up faster than you think.</p>
-  <div class="win-box">
-    <div class="win-num" id="winNum">1</div>
-    <div class="win-lbl">day streak 🔥</div>
-  </div>
-  <button class="btn-win" onclick="newDay()">← New Day</button>
+  <p class="win-sub">Every action today builds trust, visibility and momentum toward your first sale.</p>
+  <div class="win-box"><div class="win-num" id="winNum">1</div><div class="win-lbl">day streak 🔥</div></div>
+  <button class="btn-win" onclick="newDay()">New Day</button>
 </div>
 
 <script>
-// ══ ACTIONS DATA ════════════════════════════════════════════════════
-const ACTIONS = {
-  high: [
-    {product:'vault',productName:'The Reply Vault',productGoal:'First Selar sale',
-      platform:'wa',platLabel:'WhatsApp Group',
-      title:'Share Reply Vault in a networking group',
-      desc:'Post the value message in 1–2 active SA business WhatsApp groups. Lead with the problem, not the product.',
-      time:'10 min',
-      script:`Hi everyone 👋
+var S = JSON.parse(localStorage.getItem('zct3') || '{}');
+var currentMood = null;
+var doneTodayIds = [];
 
-Quick question — how many of you are still typing the same WhatsApp replies over and over every day?
-
-I put together 96 copy-and-paste templates covering every customer situation — price questions, bookings, complaints, follow-ups, the lot.
-
-It's called The Reply Vault and it's R120 once-off on Selar.
-
-Link: selar.co/237dq65411
-
-If you've ever stared at a message not knowing what to say — this is for you 😊`},
-    {product:'vault',productName:'The Reply Vault',productGoal:'First Selar sale',
-      platform:'threads',platLabel:'Threads',
-      title:'Post a "what to say when..." tip',
-      desc:'Share one exact WhatsApp reply for a common scenario. End with a soft mention of the toolkit.',
-      time:'15 min',
-      script:`What to say when a customer asks your price and then goes silent 👇
-
-"Hi [Name], just checking in — I have a slot available this week if you'd like to go ahead. Happy to answer any questions first 😊"
-
-That one message recovers more sales than any promotion.
-
-I have 96 of these in The Reply Vault — R120 once-off → selar.co/237dq65411`},
-    {product:'vault',productName:'The Reply Vault',productGoal:'First Selar sale',
-      platform:'pinterest',platLabel:'Pinterest',
-      title:'Pin a "5 WhatsApp mistakes" graphic',
-      desc:'Create a simple text-on-background Canva pin. Problem content performs long-term on Pinterest.',
-      time:'20 min',
-      script:`Pin title: "5 WhatsApp Mistakes Costing SA Small Businesses Sales"
-
-Points to include:
-• Replying hours later
-• No saved replies for common questions
-• Never following up on quiet leads
-• No clear next step at the end of the chat
-• Sending voice notes when text is faster
-
-Description: Fix all 5 → The Reply Vault: 96 WhatsApp templates. selar.co/237dq65411`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'First audit request',
-      platform:'fb',platLabel:'Facebook Group',
-      title:'Answer an inbox question in an SA group',
-      desc:'Find someone asking about managing WhatsApp or customer replies. Give real, specific advice. No pitch needed.',
-      time:'15 min',
-      script:`Look for posts with:
-"how do I manage my messages"
-"so many enquiries I can't keep up"
-"WhatsApp is overwhelming"
-"customers not responding"
-
-Reply with specific, genuine advice.
-
-You can mention the free audit naturally at the very end if it truly fits:
-"I actually audit inboxes for free if you ever want a second pair of eyes on yours 😊"`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'First audit request',
-      platform:'threads',platLabel:'Threads',
-      title:'Post "3 signs your inbox is costing you sales"',
-      desc:'Problem-awareness content. No selling. Just make people realise they have the problem.',
-      time:'15 min',
-      script:`3 signs your WhatsApp inbox is costing you sales 👇
-
-🔴 You reply hours later (customers already moved on)
-🔴 You have no saved replies (every message typed from scratch)
-🔴 You never follow up (most sales need 2–3 touches)
-
-Most small businesses have all three and don't realise it.
-
-I offer a free 15-minute inbox audit — I'll tell you exactly what's leaking and how to fix it.
-
-DM me "AUDIT" or grab a slot: inboxaidepage.netlify.app`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'First audit request',
-      platform:'tiktok',platLabel:'TikTok',
-      title:'Film a 30-second "inbox mistake" TikTok',
-      desc:'Talking head or text on screen. One mistake, one fix. Soft CTA at end. Authentic beats polished on TikTok.',
-      time:'20 min',
-      script:`Hook (first 3 seconds):
-"The reason your WhatsApp isn't making you money"
-
-Body:
-"If you're replying to customers hours after they message you — you've already lost the sale. Most people message 2 or 3 businesses at once. First to reply wins.
-
-The fix? A simple greeting automation and 5 saved replies. 30 minutes to set up. Makes you look instantly more professional.
-
-I audit WhatsApp inboxes for free — link in bio."`},
-    {product:'nle',productName:'Nurturing Little Eaters',productGoal:'Build audience',
-      platform:'pinterest',platLabel:'Pinterest',
-      title:'Pin one SA baby weaning tip',
-      desc:'One specific feeding tip for 6–12 month babies. Educational content builds your NLE audience passively.',
-      time:'15 min',
-      script:`Pin ideas:
-• "First foods for a 6 month old — where we started"
-• "Signs your baby is ready for solids"
-• "SA baby foods — gem squash puree step by step"
-• "Pap for babies — when and how"
-
-Keep it specific and South African.
-Link to your Selar page once products are live.`},
+var SCRIPTS = {
+  vault_wa: [
+    "Hi everyone\n\nQuick question - how many of you are still typing the same WhatsApp replies over and over every day?\n\nI put together 96 copy-and-paste templates covering every customer situation - price questions, bookings, complaints, follow-ups, the lot.\n\nIt is called The Reply Vault and it is R120 once-off on Selar.\n\nLink: selar.co/237dq65411\n\nIf you have ever stared at a message not knowing what to say - this is for you",
+    "Something I did that saved me hours every week\n\nI stopped typing replies from scratch and started using saved templates for every common question.\n\nPrice? Template. Booking? Template. Are you still open? Template.\n\nI put 96 of these together in The Reply Vault - R120 once-off.\n\nselar.co/237dq65411\n\nYour inbox sorted.",
+    "Be honest - how long does it take you to reply to a new WhatsApp enquiry?\n\nIf it is more than 2 minutes you are probably losing sales to faster competitors.\n\nThe Reply Vault gives you 96 ready-made replies for every situation. Copy, paste, send.\n\nR120 once-off at selar.co/237dq65411",
+    "One thing that changed my inbox immediately:\n\nSaving a reply for EVERY common question BEFORE customers even ask.\n\nPrice? Saved. Delivery? Saved. Are you still available? Saved.\n\nYou reply in seconds. Customers notice.\n\n96 templates in The Reply Vault - R120 at selar.co/237dq65411"
   ],
-  medium: [
-    {product:'vault',productName:'The Reply Vault',productGoal:'First Selar sale',
-      platform:'wa',platLabel:'WhatsApp Group',
-      title:'Share Reply Vault in one group',
-      desc:'One group only. Copy the script, paste, send. Done.',
-      time:'5 min',
-      script:`Hi everyone 👋
-
-Does anyone else spend too much time typing the same WhatsApp replies every day?
-
-I made 96 copy-paste templates for every customer situation — R120 once-off.
-
-selar.co/237dq65411
-
-(Price replies, bookings, complaints, follow-ups — all there 😊)`},
-    {product:'vault',productName:'The Reply Vault',productGoal:'First Selar sale',
-      platform:'fb',platLabel:'Facebook Group',
-      title:'Post one helpful WhatsApp tip in a group',
-      desc:'Share one specific communication tip. Mention the toolkit casually once at the end.',
-      time:'10 min',
-      script:`One thing that immediately improved my WhatsApp response rate:
-
-Saving a reply for EVERY common question before customers even ask.
-
-Price? Saved. Delivery? Saved. "Are you still available?" Saved.
-
-You reply in seconds. Customers notice.
-
-I have 96 of these in The Reply Vault — R120 → selar.co/237dq65411`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'First audit request',
-      platform:'fb',platLabel:'Facebook Group',
-      title:'Leave one genuinely helpful comment',
-      desc:'Find someone asking about managing customers or messages. Help them as Zondra the person — not as a brand.',
-      time:'10 min',
-      script:`Look for: overwhelmed business owners, message overload, "how do I keep up" posts.
-
-Give real, specific advice about their exact situation.
-
-Only mention the free audit if it truly fits — the goal is just to be visible and helpful.`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'First audit request',
-      platform:'threads',platLabel:'Threads',
-      title:'Post one inbox tip on Threads',
-      desc:'Short, punchy, one idea. No graphic needed.',
-      time:'8 min',
-      script:`Pick one and post:
-
-Option A:
-"Your WhatsApp greeting message is free to set up and takes 5 minutes. If you don't have one, every new customer gets silence. Fix it today."
-
-Option B:
-"The follow-up message most SA businesses never send:
-'Hi [Name], just checking in — still happy to help when you're ready 😊'
-That message alone has saved hundreds of sales."
-
-Option C:
-"Replying 4 hours later isn't slow — it's a closed door. They already bought elsewhere."`},
+  vault_threads: [
+    "What to say when a customer asks your price and then goes silent\n\nHi Name, just checking in - I have a slot available this week if you would like to go ahead. Happy to answer any questions first\n\nThat one message recovers more sales than any promotion.\n\nI have 96 of these in The Reply Vault - R120 once-off at selar.co/237dq65411",
+    "The WhatsApp reply most SA businesses never send:\n\nHi Name, I noticed you asked about our products last week - still happy to help if you are ready\n\nMost sales need 2-3 touches. This is touch number 2.\n\n96 follow-up and sales templates in The Reply Vault - R120 at selar.co/237dq65411",
+    "Nobody tells you this about running a small business:\n\nYour reply speed matters more than your prices.\n\nA customer who gets a response in 2 minutes will choose you over the cheaper option who replies in 2 hours.\n\nThe Reply Vault gives you 96 ready-to-send templates so you are always first. R120 at selar.co/237dq65411",
+    "The 3 WhatsApp replies that close the most sales:\n\n1. The price reply that does not just say it depends\n2. The follow-up that does not feel pushy\n3. The complaint reply that turns angry into loyal\n\nAll 3 plus 93 more in The Reply Vault - R120 at selar.co/237dq65411"
   ],
-  low: [
-    {product:'vault',productName:'The Reply Vault',productGoal:'Stay visible',
-      platform:'all',platLabel:'WhatsApp Status',
-      title:'Post Selar link on WhatsApp Status',
-      desc:'One line of text + your link. 60 seconds. Stays up 24 hours. Every contact sees it.',
-      time:'2 min',
-      script:`96 WhatsApp templates for small businesses — R120 once-off 💬
-
-selar.co/237dq65411
-
-(Price replies, booking confirmations, complaint handling, follow-ups — all done for you)`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'Stay visible',
-      platform:'fb',platLabel:'Facebook Group',
-      title:'Like and comment on 3 posts',
-      desc:'No writing required. Just be present. React to 3 posts, leave one short encouraging comment. Your name stays visible.',
-      time:'5 min',
-      script:`Just show up. Scroll your main SA business group.
-
-Like 3 posts that resonate.
-Leave one comment — even "This is so true!" counts.
-
-Consistency of presence matters more than perfection of content.`},
-    {product:'inbox',productName:'Inbox Aide SA',productGoal:'Stay visible',
-      platform:'threads',platLabel:'Threads',
-      title:'Reply to one post about business struggles',
-      desc:'Find someone venting about customers or running a business alone. Leave one kind, relatable reply.',
-      time:'5 min',
-      script:`Search Threads: "small business" "WhatsApp" "customers" "solopreneur"
-
-Find someone struggling with something you understand.
-
-Reply with empathy and one practical thing. Don't pitch. Just be human.
-
-Example:
-"This is so real. The hardest part of running a business alone is that every message is on you 💛"`},
+  vault_pinterest: [
+    "Pin title: 5 WhatsApp Mistakes Costing SA Small Businesses Sales\n\nPoints to include:\n- Replying hours later\n- No saved replies for common questions\n- Never following up on quiet leads\n- No clear next step at end of chat\n- Sending voice notes when text is faster\n\nDescription: Fix all 5. The Reply Vault: 96 WhatsApp templates. selar.co/237dq65411",
+    "Pin title: What to Say When a Customer Asks Your Price on WhatsApp\n\nBody: Most businesses fumble the price question. Here is an exact script that works.\n\nDescription: 96 ready-made WhatsApp replies for SA small businesses. The Reply Vault - R120. selar.co/237dq65411",
+    "Pin title: How to Never Lose a WhatsApp Sale Again\n\nBody: The 3-message system that keeps leads warm even when they go quiet.\n\nDescription: Get 96 copy-paste templates for every customer situation. The Reply Vault at selar.co/237dq65411",
+    "Pin title: The WhatsApp Follow-Up Message That Recovers Lost Sales\n\nBody: Most SA businesses never follow up. This one message changes everything.\n\nDescription: The Reply Vault - 96 WhatsApp templates for small businesses. R120 once-off at selar.co/237dq65411"
+  ],
+  inbox_fb: [
+    "Look for posts with: how do I manage my messages / so many enquiries / WhatsApp is overwhelming\n\nReply with specific genuine advice about their situation.\n\nEnd naturally if it fits:\nI actually audit inboxes for free if you ever want a second pair of eyes on yours",
+    "Look for: business owners venting about missing messages or slow responses.\n\nShare one specific tip relevant to their problem - saved replies, labels, away messages.\n\nBe Zondra the person not a brand. Trust builds first.",
+    "Find someone asking how to manage Facebook comments or DMs.\n\nTell them exactly: reply to every comment within the hour, move interested people to DM with I will send you the details now.\n\nThat one tip alone can double their lead conversion.",
+    "Look for posts about losing customers or slow business.\n\nAsk them: Have you checked if your WhatsApp greeting message is set up? It is the first thing customers see.\n\nSimple, helpful, specific. Opens the door to a real conversation."
+  ],
+  inbox_threads: [
+    "3 signs your WhatsApp inbox is costing you sales\n\nYou reply hours later - customers already moved on\nYou have no saved replies - every message typed from scratch\nYou never follow up - most sales need 2-3 touches\n\nMost small businesses have all three.\n\nFree 15-minute inbox audit - DM me AUDIT or visit: inboxaidepage.netlify.app",
+    "The WhatsApp setting most SA small businesses have never turned on:\n\nThe greeting message.\n\nEvery new contact gets an instant reply even at 2am.\nHi thanks for reaching out to Business Name. We will get back to you within the hour.\n\n5 minutes to set up. Customers notice immediately.\n\nFree audit at inboxaidepage.netlify.app",
+    "Unpopular opinion:\n\nYour WhatsApp is your most important sales tool.\n\nNot your Instagram. Not your website. Your inbox.\n\nAnd most small businesses treat it like an afterthought.\n\nI audit WhatsApp and Facebook inboxes for free at inboxaidepage.netlify.app",
+    "A customer messaged 3 businesses at the same time.\n\nOne replied in 4 minutes.\nOne replied in 2 hours.\nOne never replied.\n\nGuess who got the sale?\n\nYour inbox response time IS your competitive advantage.\n\nFree audit at inboxaidepage.netlify.app"
+  ],
+  inbox_low: [
+    "Check your WhatsApp for any messages older than 24 hours.\n\nSend each one:\nHi Name, just circling back - still happy to help whenever you are ready\n\nTake 5 minutes. That is your marketing for today done.",
+    "Scroll your inbox for the last 3 days.\n\nAnyone who asked a question but did not book?\n\nMessage them:\nHi Name, did you get everything you needed? Happy to answer any other questions\n\nTwo sentences. Could recover a sale today.",
+    "Your WhatsApp status is free marketing to everyone who already knows you.\n\nPost one thing today:\nTaking bookings for this week - message me to secure your slot\n\nTakes 30 seconds. Your warmest audience sees it.",
+    "Like and comment on 3 posts in your main SA business Facebook group.\n\nNo writing needed. Just be present.\n\nConsistency of presence matters more than perfection of content."
+  ],
+  nle_pinterest: [
+    "Pin ideas:\n- First foods for a 6 month old - where we started\n- Signs your baby is ready for solids\n- Gem squash puree - SA baby food step by step\n\nKeep it specific, practical, South African.\nLink to your Selar page once products are live.",
+    "Pin ideas:\n- Baby led weaning vs purees - what worked for us\n- Iron-rich foods for SA babies\n- Pap for babies - when and how to introduce it\n\nEducational content builds your NLE audience passively for months.",
+    "Pin ideas:\n- How to introduce allergenic foods safely\n- Baby food combinations that work at 7 months\n- What I wish I knew about starting solids\n\nPersonal, real, South African context. That is what stands out.",
+    "Pin ideas:\n- 6 month baby meal plan - simple and affordable\n- SA fruits for babies - what is in season\n- Butternut puree for babies - how to make it\n\nSeasonal content gets saved and reshared. Pin it now, it works for months."
   ]
 };
 
-// ══ STATE ════════════════════════════════════════════════════════════
-let mood = null;
-let done = [];
-let S = JSON.parse(localStorage.getItem('zcState') || '{}');
+var TIKTOK_IDEAS = [
+  {
+    title: "The WhatsApp reply that costs you sales",
+    brand: "Inbox Aide SA",
+    hook: "I am going to show you the WhatsApp mistake most SA small businesses make every single day",
+    steps: [
+      { t: "Hook 0-3 sec", b: "Point at camera: This WhatsApp habit is costing you sales and you do not even know it" },
+      { t: "The problem 3-12 sec", b: "Most businesses reply to customer messages hours later. By then the customer already bought from someone else. They messaged 3 businesses. Fastest reply wins." },
+      { t: "The fix 12-22 sec", b: "Set up a greeting message right now. Takes 5 minutes. Every new contact gets an instant reply even when you are busy." },
+      { t: "CTA 22-30 sec", b: "I audit WhatsApp inboxes for free - link in bio. I will tell you exactly what is costing you leads." }
+    ],
+    tip: "Film yourself on your phone, text overlays work too. No fancy setup needed. Authentic beats polished on TikTok."
+  },
+  {
+    title: "Day in my life as a work from home mom building a business",
+    brand: "Personal - All brands",
+    hook: "POV: building a business from your phone while your toddler naps",
+    steps: [
+      { t: "Hook 0-3 sec", b: "Quick cuts: coffee, phone, baby sleeping. Text overlay: building my business in 45 minute windows" },
+      { t: "What you do 3-15 sec", b: "Show your screen briefly - the audit tool, your Selar page. I help SA small businesses sort out their WhatsApp inboxes" },
+      { t: "The real talk 15-25 sec", b: "It is not glamorous. No office. No team. Just me, my phone, and stolen hours." },
+      { t: "CTA 25-30 sec", b: "If you are building something too - follow for the honest version of solopreneur life" }
+    ],
+    tip: "This type of content builds the most loyal audience. People root for the real journey."
+  },
+  {
+    title: "96 WhatsApp templates - I will show you what is inside",
+    brand: "The Reply Vault",
+    hook: "Stop typing the same WhatsApp replies from scratch every single day",
+    steps: [
+      { t: "Hook 0-3 sec", b: "Stop typing the same WhatsApp replies from scratch every single day" },
+      { t: "Show the product 3-15 sec", b: "Screen record scrolling through The Reply Vault. Show the categories - greetings, price replies, complaints, follow-ups. 96 templates, 13 categories, R120 once-off" },
+      { t: "Demonstrate one 15-25 sec", b: "Show copying a template and how fast it pastes into WhatsApp. This took me 4 seconds instead of 4 minutes" },
+      { t: "CTA 25-30 sec", b: "Link in bio - R120 once-off. Your inbox sorted." }
+    ],
+    tip: "Screen recordings convert really well for digital products. Show do not tell."
+  },
+  {
+    title: "What I feed my baby this week - real SA food",
+    brand: "Nurturing Little Eaters",
+    hook: "What my South African baby actually eats in a week - no imported pouches, just real SA food",
+    steps: [
+      { t: "Hook 0-3 sec", b: "I am going to show you what my baby actually eats - no imported pouches, just real SA food" },
+      { t: "Show the food 3-20 sec", b: "Quick cuts of simple meals: gem squash, pap, butternut, banana. Real, affordable, local. Everything from Pick n Pay under R50" },
+      { t: "One tip 20-27 sec", b: "Babies do not need variety every meal - they need safe, repeated exposure. Same foods, different textures as they grow" },
+      { t: "CTA 27-30 sec", b: "Follow for more real SA baby feeding tips - no fluff" }
+    ],
+    tip: "Baby content does incredibly well on TikTok. Authentic budget-conscious SA content stands out from Western baby influencer content."
+  },
+  {
+    title: "The free inbox audit I do - here is what I check",
+    brand: "Inbox Aide SA",
+    hook: "I audit WhatsApp inboxes for free - here is exactly what I check",
+    steps: [
+      { t: "Hook 0-3 sec", b: "I offer free WhatsApp inbox audits and most businesses fail at least 4 of these 10 checks" },
+      { t: "The checklist 3-20 sec", b: "Text on screen: Response time, greeting message, saved replies, labels, comment moderation, follow-up system. Most people have none of these set up" },
+      { t: "The result 20-27 sec", b: "When these are all in place your inbox becomes a sales machine. When they are not you are just hoping customers are patient enough to wait" },
+      { t: "CTA 27-30 sec", b: "Free audit in bio - I will check yours and tell you exactly what to fix first" }
+    ],
+    tip: "Educational content that makes people self-diagnose converts extremely well to leads."
+  },
+  {
+    title: "I built an app from my phone with no laptop",
+    brand: "Personal - Inbox Aide",
+    hook: "I built a business tool from my Samsung phone - no laptop, no coding experience",
+    steps: [
+      { t: "Hook 0-3 sec", b: "People keep asking how I built my apps - I am going to show you" },
+      { t: "Show the tools 3-15 sec", b: "Claude AI, GitHub on mobile, Netlify. All free. All phone-friendly. I describe what I want, Claude builds it, I deploy it from my phone browser." },
+      { t: "Show the result 15-25 sec", b: "Screen record of your audit tool or landing page. This is a real live web app I built and deployed without a laptop" },
+      { t: "CTA 25-30 sec", b: "Follow if you are building something from scratch with limited resources - I share the honest journey" }
+    ],
+    tip: "This content positions you as resourceful and inspiring. It also attracts other solopreneurs who become your community and potential clients."
+  }
+];
 
-function today() { return new Date().toISOString().split('T')[0]; }
-function streak() { return S.streak || 0; }
+var ACTIONS = {
+  high: [
+    { product:'vault', pName:'The Reply Vault', pGoal:'First Selar sale', plat:'wa', platLbl:'WhatsApp Group', title:'Share Reply Vault in a networking group', desc:'Post in 1-2 active SA business WhatsApp groups. Lead with the problem, not the product.', time:'10 min', scriptKey:'vault_wa' },
+    { product:'vault', pName:'The Reply Vault', pGoal:'First Selar sale', plat:'threads', platLbl:'Threads', title:'Post a what to say when tip on Threads', desc:'Share one exact WhatsApp reply for a common scenario. Soft mention of toolkit at end.', time:'15 min', scriptKey:'vault_threads' },
+    { product:'vault', pName:'The Reply Vault', pGoal:'First Selar sale', plat:'pinterest', platLbl:'Pinterest', title:'Pin a WhatsApp tips graphic', desc:'Create a simple text-on-background Canva pin. Problem content performs long-term on Pinterest.', time:'20 min', scriptKey:'vault_pinterest' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'First audit request', plat:'fb', platLbl:'Facebook Group', title:'Answer an inbox question in an SA group', desc:'Find someone asking about managing WhatsApp or customer replies. Give real specific advice.', time:'15 min', scriptKey:'inbox_fb' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'First audit request', plat:'threads', platLbl:'Threads', title:'Post an inbox insight on Threads', desc:'Problem-awareness content. No selling. Make people realise they have the problem.', time:'15 min', scriptKey:'inbox_threads' },
+    { product:'nle', pName:'Nurturing Little Eaters', pGoal:'Build audience', plat:'pinterest', platLbl:'Pinterest', title:'Pin one SA baby weaning tip', desc:'One specific feeding tip for 6-12 month babies. Builds NLE audience passively.', time:'15 min', scriptKey:'nle_pinterest' }
+  ],
+  medium: [
+    { product:'vault', pName:'The Reply Vault', pGoal:'First Selar sale', plat:'wa', platLbl:'WhatsApp Group', title:'Share Reply Vault in one group', desc:'One group only. Copy the script, paste, send. Done.', time:'5 min', scriptKey:'vault_wa' },
+    { product:'vault', pName:'The Reply Vault', pGoal:'First Selar sale', plat:'fb', platLbl:'Facebook Group', title:'Post one helpful WhatsApp tip in a group', desc:'Share one specific communication tip. Mention toolkit casually once at end.', time:'10 min', scriptKey:'vault_threads' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'First audit request', plat:'fb', platLbl:'Facebook Group', title:'Leave one genuinely helpful comment', desc:'Find someone asking about managing customers or messages. Help them as a person.', time:'10 min', scriptKey:'inbox_fb' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'First audit request', plat:'threads', platLbl:'Threads', title:'Post one inbox tip on Threads', desc:'Short, punchy, one idea. No graphic needed.', time:'8 min', scriptKey:'inbox_threads' }
+  ],
+  low: [
+    { product:'vault', pName:'The Reply Vault', pGoal:'Stay visible', plat:'all', platLbl:'WhatsApp Status', title:'Post Selar link on WhatsApp Status', desc:'One line of text plus your link. 60 seconds. Every contact sees it.', time:'2 min', scriptKey:'vault_wa' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'Stay visible', plat:'fb', platLbl:'Facebook Group', title:'Like and comment on 3 posts', desc:'No writing required. Just be present. Your name stays visible.', time:'5 min', scriptKey:'inbox_low' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'Stay visible', plat:'threads', platLbl:'Threads', title:'Reply to one post about business struggles', desc:'Find someone venting about customers or running alone. Leave one kind relatable reply.', time:'5 min', scriptKey:'inbox_threads' }
+  ]
+};
 
-// ══ INIT ═════════════════════════════════════════════════════════════
-(function init() {
-  const now = new Date();
-  const h = now.getHours();
-  document.getElementById('greeting').textContent = h < 12 ? 'morning' : h < 17 ? 'afternoon' : 'evening';
-  document.getElementById('todayDate').textContent = now.toLocaleDateString('en-ZA', {weekday:'long',day:'numeric',month:'long'});
+function todayStr() { return new Date().toISOString().split('T')[0]; }
 
-  const s = streak();
-  document.getElementById('streakTxt').textContent = s === 0 ? 'No streak yet' : s + ' day streak 🔥';
-  document.getElementById('streakSub').textContent = s >= 7 ? "You're unstoppable. Keep going." : s >= 3 ? "Building momentum — don't break it." : s > 0 ? "Good start. One more day makes it real." : "Start today — every action counts.";
+function dailySeed() {
+  var d = new Date();
+  return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+}
 
+function pickScript(key, offset) {
+  var pool = SCRIPTS[key];
+  if (!pool) return null;
+  var seed = dailySeed() + (offset || 0);
+  return pool[seed % pool.length];
+}
+
+function getTikTokIdea() {
+  return TIKTOK_IDEAS[dailySeed() % TIKTOK_IDEAS.length];
+}
+
+function getTikTokIndex() {
+  return dailySeed() % TIKTOK_IDEAS.length;
+}
+
+function initApp() {
+  var now = new Date();
+  var h = now.getHours();
+  var greet = h < 12 ? 'morning' : h < 17 ? 'afternoon' : 'evening';
+  document.getElementById('greeting').textContent = greet;
+  document.getElementById('todayDate').textContent = now.toLocaleDateString('en-ZA', { weekday:'long', day:'numeric', month:'long' });
+  var s = S.streak || 0;
+  document.getElementById('streakTxt').textContent = s === 0 ? 'No streak yet' : s + ' day streak';
+  var sub = s >= 7 ? 'You are unstoppable. Keep going.' : s >= 3 ? 'Building momentum. Do not break it.' : s > 0 ? 'Good start. One more day makes it real.' : 'Start today - every action counts.';
+  document.getElementById('streakSub').textContent = sub;
   if (!navigator.onLine) document.getElementById('offlineBanner').style.display = 'block';
-  window.addEventListener('online',  () => document.getElementById('offlineBanner').style.display = 'none');
-  window.addEventListener('offline', () => document.getElementById('offlineBanner').style.display = 'block');
-})();
+  window.addEventListener('online', function() { document.getElementById('offlineBanner').style.display = 'none'; });
+  window.addEventListener('offline', function() { document.getElementById('offlineBanner').style.display = 'block'; });
+}
 
-// ══ MOOD PICK ════════════════════════════════════════════════════════
 function pickMood(m) {
-  mood = m;
-  done = S['done_' + today()] || [];
+  currentMood = m;
+  doneTodayIds = S['done_' + todayStr()] || [];
   buildActions();
   show('actionsScreen');
 }
 
 function buildActions() {
-  const items = ACTIONS[mood];
-  const titles = { high: "Full set. Let's get visible.", medium: "Focused and intentional.", low: "One small thing. That's enough." };
-  const metas  = { high: '⚡ High Energy', medium: '🌤 Medium Energy', low: '🌿 Low Energy' };
+  var items = ACTIONS[currentMood];
+  var titles = { high: "Full set. Let us get visible.", medium: "Focused and intentional.", low: "One small thing. That is enough." };
+  var metas = { high: 'High Energy', medium: 'Medium Energy', low: 'Low Energy' };
+  var pipClass = { high: 'pip-high', medium: 'pip-med', low: 'pip-low' };
 
-  document.getElementById('moodPip').className = 'mood-pip ' + mood;
-  document.getElementById('actMeta').textContent = metas[mood] + ' · ' + new Date().toLocaleDateString('en-ZA',{weekday:'short',day:'numeric',month:'short'});
-  document.getElementById('actTitle').textContent = titles[mood];
+  document.getElementById('moodPip').className = 'pip ' + pipClass[currentMood];
+  document.getElementById('actMeta').textContent = metas[currentMood] + ' - ' + new Date().toLocaleDateString('en-ZA', { weekday:'short', day:'numeric', month:'short' });
+  document.getElementById('actTitle').textContent = titles[currentMood];
 
-  const byProd = {};
-  items.forEach((a, i) => {
+  var platClass = { wa:'p-wa', fb:'p-fb', threads:'p-threads', tiktok:'p-tiktok', pinterest:'p-pinterest', all:'p-all' };
+
+  var byProd = {};
+  items.forEach(function(a, i) {
+    a._idx = i;
     if (!byProd[a.product]) byProd[a.product] = [];
-    byProd[a.product].push({...a, idx: i});
+    byProd[a.product].push(a);
   });
 
-  const platClass = { wa:'p-wa', fb:'p-fb', threads:'p-threads', tiktok:'p-tiktok', pinterest:'p-pinterest', all:'p-all' };
+  var body = document.getElementById('actBody');
+  body.innerHTML = '';
 
-  let html = '';
-  ['vault','inbox','nle'].forEach(prod => {
+  ['vault', 'inbox', 'nle'].forEach(function(prod) {
     if (!byProd[prod]) return;
-    const items = byProd[prod];
-    html += `<div class="prod-block">
-      <div class="prod-head">
-        <div class="prod-dot ${prod}"></div>
-        <span class="prod-name">${items[0].productName}</span>
-        <span class="prod-goal">${items[0].productGoal}</span>
-      </div>`;
+    var its = byProd[prod];
+    var block = document.createElement('div');
+    block.className = 'prod-block';
 
-    items.forEach(a => {
-      const isDone = done.includes(a.idx);
-      html += `
-      <div class="act-card ${isDone ? 'done' : ''}" id="card_${a.idx}" onclick="toggle(${a.idx}, this)">
-        <div class="chk">${isDone ? '✓' : ''}</div>
-        <div class="act-inner">
-          <span class="plat-tag ${platClass[a.platform] || 'p-all'}">${a.platLabel}</span>
-          <div class="act-title-txt">${a.title}</div>
-          <div class="act-desc">${a.desc}</div>
-          <div class="act-time">${a.time}</div>
-          ${a.script ? `
-          <button class="script-btn" onclick="event.stopPropagation();toggleScript(${a.idx})">
-            📋 <span id="sl_${a.idx}">Show ready-made script</span>
-          </button>
-          <div class="script-box" id="sb_${a.idx}">${a.script}</div>` : ''}
-        </div>
-      </div>`;
+    var hdr = document.createElement('div');
+    hdr.className = 'prod-hdr';
+    hdr.innerHTML = '<div class="prod-dot dot-' + prod + '"></div><span class="prod-name">' + its[0].pName + '</span><span class="prod-goal">' + its[0].pGoal + '</span>';
+    block.appendChild(hdr);
+
+    its.forEach(function(a, offset) {
+      var isDone = doneTodayIds.indexOf(a._idx) !== -1;
+      var script = pickScript(a.scriptKey, offset);
+      var pc = platClass[a.plat] || 'p-all';
+
+      var card = document.createElement('div');
+      card.className = 'act-card' + (isDone ? ' done' : '');
+      card.id = 'card_' + a._idx;
+
+      var checkDiv = document.createElement('div');
+      checkDiv.className = 'chk';
+      checkDiv.textContent = isDone ? 'v' : '';
+      card.appendChild(checkDiv);
+
+      var inner = document.createElement('div');
+      inner.className = 'act-inner';
+      inner.innerHTML = '<span class="plat ' + pc + '">' + a.platLbl + '</span><div class="act-ttl">' + a.title + '</div><div class="act-desc">' + a.desc + '</div><div class="act-time">' + a.time + '</div>';
+
+      if (script) {
+        var scriptBtn = document.createElement('button');
+        scriptBtn.className = 'script-btn';
+        scriptBtn.textContent = "Show script";
+        var scriptBox = document.createElement('div');
+        scriptBox.className = 'script-box';
+        scriptBox.textContent = script;
+        var copyBtn = document.createElement('button');
+        copyBtn.className = 'copy-btn';
+        copyBtn.textContent = 'Copy script';
+        var capturedScript = script;
+        copyBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          copyText(capturedScript, copyBtn);
+        });
+        scriptBox.appendChild(copyBtn);
+        scriptBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = scriptBox.classList.contains('open');
+          scriptBox.classList.toggle('open');
+          scriptBtn.textContent = isOpen ? "Show script" : "Hide script";
+        });
+        inner.appendChild(scriptBtn);
+        inner.appendChild(scriptBox);
+      }
+
+      card.appendChild(inner);
+      var capturedIdx = a._idx;
+      card.addEventListener('click', function() { toggleAction(capturedIdx, card); });
+      block.appendChild(card);
     });
-    html += '</div>';
+
+    body.appendChild(block);
   });
 
-  document.getElementById('actBody').innerHTML = html;
+  // TikTok card for high energy
+  if (currentMood === 'high') {
+    var idea = getTikTokIdea();
+    var tkIdx = getTikTokIndex();
+
+    var tkBlock = document.createElement('div');
+    tkBlock.className = 'prod-block';
+
+    var tkHdr = document.createElement('div');
+    tkHdr.className = 'prod-hdr';
+    tkHdr.innerHTML = '<div class="prod-dot dot-tiktok"></div><span class="prod-name">TikTok</span><span class="prod-goal">Daily Idea</span>';
+    tkBlock.appendChild(tkHdr);
+
+    var tkCard = document.createElement('div');
+    tkCard.className = 'tk-card';
+
+    var stepsHtml = idea.steps.map(function(s, i) {
+      return '<div class="tk-step"><div class="tk-num">' + (i+1) + '</div><div class="tk-step-txt"><strong>' + s.t + '</strong>' + s.b + '</div></div>';
+    }).join('');
+
+    var tkLbl = document.createElement("div");
+    tkLbl.className = "tk-lbl";
+    tkLbl.textContent = "TikTok Idea";
+    tkCard.appendChild(tkLbl);
+    var tkTitleEl = document.createElement("div");
+    tkTitleEl.className = "tk-title";
+    tkTitleEl.textContent = idea.title;
+    tkCard.appendChild(tkTitleEl);
+    var tkBrandEl = document.createElement("div");
+    tkBrandEl.className = "tk-brand";
+    tkBrandEl.textContent = idea.brand;
+    tkCard.appendChild(tkBrandEl);
+    var tkHL = document.createElement("div");
+    tkHL.className = "tk-section-lbl";
+    tkHL.textContent = "Hook";
+    tkCard.appendChild(tkHL);
+    var tkHookEl = document.createElement("div");
+    tkHookEl.className = "tk-hook";
+    tkHookEl.textContent = idea.hook;
+    tkCard.appendChild(tkHookEl);
+    var tkSL = document.createElement("div");
+    tkSL.className = "tk-section-lbl";
+    tkSL.textContent = "Step by step";
+    tkCard.appendChild(tkSL);
+    idea.steps.forEach(function(s, i) {
+      var sd = document.createElement("div"); sd.className = "tk-step";
+      var nd = document.createElement("div"); nd.className = "tk-num"; nd.textContent = String(i+1);
+      var td = document.createElement("div"); td.className = "tk-step-txt";
+      var st = document.createElement("strong"); st.textContent = s.t;
+      td.appendChild(st); td.appendChild(document.createTextNode(" " + s.b));
+      sd.appendChild(nd); sd.appendChild(td); tkCard.appendChild(sd);
+    });
+    var tkTipEl = document.createElement("div");
+    tkTipEl.className = "tk-tip";
+    tkTipEl.textContent = idea.tip;
+    tkCard.appendChild(tkTipEl);
+    var tkCopyBtn = document.createElement("button");
+    tkCopyBtn.className = "tk-copy";
+    tkCopyBtn.textContent = "Copy full script";
+    tkCard.appendChild(tkCopyBtn);
+    tkBlock.appendChild(tkCard);
+    body.appendChild(tkBlock);
+  }
+
   updateProg();
 }
 
-function toggle(idx, card) {
-  const i = done.indexOf(idx);
-  if (i === -1) done.push(idx); else done.splice(i, 1);
-  S['done_' + today()] = done;
+function toggleAction(idx, card) {
+  var i = doneTodayIds.indexOf(idx);
+  if (i === -1) doneTodayIds.push(idx); else doneTodayIds.splice(i, 1);
+  S['done_' + todayStr()] = doneTodayIds;
   save();
   card.classList.toggle('done');
-  card.querySelector('.chk').textContent = done.includes(idx) ? '✓' : '';
+  card.querySelector('.chk').textContent = doneTodayIds.indexOf(idx) !== -1 ? 'v' : '';
   updateProg();
-}
-
-function toggleScript(idx) {
-  const box = document.getElementById('sb_' + idx);
-  const lbl = document.getElementById('sl_' + idx);
-  box.classList.toggle('open');
-  lbl.textContent = box.classList.contains('open') ? 'Hide script' : 'Show ready-made script';
 }
 
 function updateProg() {
-  const total = ACTIONS[mood].length;
-  const n = done.length;
-  const pct = total ? Math.round(n / total * 100) : 0;
+  var total = ACTIONS[currentMood].length;
+  var n = doneTodayIds.length;
+  var pct = total ? Math.round(n / total * 100) : 0;
   document.getElementById('progFill').style.width = pct + '%';
-  document.getElementById('progLabel').textContent = n + ' of ' + total + ' done';
+  document.getElementById('progLbl').textContent = n + ' of ' + total + ' done';
+}
+
+function copyText(text, btn) {
+  var orig = btn.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); btn.textContent = 'Copied!'; btn.classList.add('copied'); setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 2000); } catch(e) {}
+    document.body.removeChild(ta);
+  }
 }
 
 function dayDone() {
-  const t = today();
-  const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
-  const yStr = yesterday.toISOString().split('T')[0];
-  if (S.lastDone === t) {
-    // already counted
-  } else if (S.lastDone === yStr) {
-    S.streak = (S.streak || 0) + 1;
-  } else {
-    S.streak = 1;
-  }
-  S.lastDone = t;
-  save();
+  var t = todayStr();
+  var yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+  var y = yesterday.toISOString().split('T')[0];
+  if (S.lastDone === t) {}
+  else if (S.lastDone === y) { S.streak = (S.streak || 0) + 1; }
+  else { S.streak = 1; }
+  S.lastDone = t; save();
   document.getElementById('winNum').textContent = S.streak;
   show('winScreen');
 }
 
 function goBack() { show('moodScreen'); }
-function newDay()  { initMood(); show('moodScreen'); }
-
-function initMood() {
-  const s = S.streak || 0;
-  document.getElementById('streakTxt').textContent = s === 0 ? 'No streak yet' : s + ' day streak 🔥';
-}
-
+function newDay() { initApp(); show('moodScreen'); }
 function show(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.screen').forEach(function(s) { s.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
+function save() { localStorage.setItem('zct3', JSON.stringify(S)); }
 
-function save() { localStorage.setItem('zcState', JSON.stringify(S)); }
-
-// ══ PWA ══════════════════════════════════════════════════════════════
-(function setupPWA() {
-  // Inject manifest
-  const manifest = {
-    name: "Zondra's Creator Tool",
-    short_name: "Creator Tool",
-    description: "Mood-based daily sales planner for Zondra",
-    start_url: "./",
-    display: "standalone",
-    background_color: "#FAF0E6",
-    theme_color: "#FAF0E6",
-    orientation: "portrait",
+// PWA setup
+(function() {
+  var manifest = {
+    name: "Zondra's Creator Tool", short_name: "Creator Tool",
+    start_url: "./", display: "standalone",
+    background_color: "#FAF0E6", theme_color: "#FAF0E6", orientation: "portrait",
     icons: [
       { src: "data:image/png;base64,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", sizes: "192x192", type: "image/png" },
       { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAX00lEQVR4nO3d+ZvddXnH4Wcmq6AJ+46sgkIRFRQqoihCxUq1YN29QDZFKGEmYTJZCQlJJoFJSFXcgkVAqlKoVC0WhWLRFhdEpIAgCBFkUZaEJZBtpj/U2BizzGS+cz7nnOe+/wB5J9clzyufM5y0RIO5Z8bxvaU3AMC67Dvl6pbSG/qqroc69gA0unqNgrob5egD0KzqKQbqYoijD0A2pWOg6D/c4Qcgu1IhUPN/qKMPAOtWyxhordU/KMLxB4ANqeWdrElpOPwA0D+D/RowqP/jDj8ADMxghcCgfQTg+APAwA3WPR2UAHD8AaA6g3FXK31WcPgBYHBV9ZFAZS8Ajj8ADL6q7m0lAeD4A0DtVHF3BxwAjj8A1N5A7++AAsDxB4ByBnKHNzkAHH8AKG9T7/EmBYDjDwD1Y1Pucr8DwPEHgPrT3/vcrwBw/AGgfvXnTtf0bwMEAOpDnwPAn/4BoP719V73KQAcfwBoHH252xsNAMcfABrPxu63nwEAgIQ2GAD+9A8AjWtDd9wLAAAktN4A8Kd/AGh867vn6wwAxx8Amse67rqPAAAgIQEAAAn9WQB4/geA5rP2ffcCAAAJ/UkA+NM/ADSvNe+8FwAASEgAAEBCfwwAz/8A0PxW33svAACQkAAAgIRaIjz/A0A2XgAAICEBAAAJCQAASEgAAEBCrX4AEADy8QIAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIRa951ydUvpEQBAbXkBAICEBAAAJCQAACAhAQAACbXeM+P43tIjAIDa8gIAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIRali9e1Ft6BABQW14AACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhoaOkBUKWf3npbnHLamaVn0GS2227buP66b5SeAZXyAgAACQkAAEhIAABAQgIAABISAACQkAAAgIQEAAAkJAAAICEBAAAJCQAASEgAAEBCAgAAEhIAAJCQAACAhAQAACQkAAAgIQEAAAkJAABISAAAQEICAAASEgAAkJAAAICEBAAAJCQAACAhAQAACQkAAEhIAABAQgIAYCOOOvKtpSdA5QQAwAYc8oaDo73tzNIzoHICAGA9dt1l55g7Z0YMGTKk9BSonAAAWIfNN9ssFsyfG6NHjSo9BQaFAABYS2tra8yeNS323HP30lNg0AgAgLWcecZp8ebDDys9AwZVy/LFi3pLjwAa16yu7vj6VdeUnlGZY95xVMyeOa30DBh0XgCATXb1Ndc21fHfb79XxrSpE0rPgJoQAMAmufVnP4/Zc+aV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", sizes: "512x512", type: "image/png", purpose: "any maskable" }
     ]
   };
-  const blob = new Blob([JSON.stringify(manifest)], {type:'application/json'});
-  const ml = document.createElement('link'); ml.rel = 'manifest';
+  var blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+  var ml = document.createElement('link'); ml.rel = 'manifest';
   ml.href = URL.createObjectURL(blob); document.head.appendChild(ml);
-
-  // Register service worker via blob
   if ('serviceWorker' in navigator) {
-    const sw = `
-const CACHE = 'zct-v1';
-self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./'])).then(() => self.skipWaiting()));
-});
-self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys().then(keys =>
-    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
-  ).then(() => self.clients.claim()));
-});
-self.addEventListener('fetch', e => {
-  e.respondWith(caches.match(e.request).then(c => c || fetch(e.request).catch(() => c)));
-});`;
-    const swBlob = new Blob([sw], {type:'text/javascript'});
-    const swUrl  = URL.createObjectURL(swBlob);
-    navigator.serviceWorker.register(swUrl).catch(() => {});
+    var sw = "const C='zct-v3';self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(['./'])).then(()=>self.skipWaiting()))});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request).catch(()=>c)))});";
+    var swBlob = new Blob([sw], { type: 'text/javascript' });
+    navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(function() {});
   }
 })();
+
+document.addEventListener('DOMContentLoaded', initApp);
 </script>
 </body>
 </html>
