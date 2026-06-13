@@ -123,6 +123,11 @@ body { font-family:'DM Sans',sans-serif; background:var(--beige); color:var(--br
 .win-num { font-family:'Syne',serif; font-size:3.5rem; font-weight:800; color:var(--blush-light); line-height:1; }
 .win-lbl { font-size:0.8rem; color:var(--muted); margin-top:5px; }
 .btn-win { background:var(--blush); color:#fff; padding:16px 40px; border-radius:12px; font-size:0.95rem; font-weight:700; border:none; cursor:pointer; font-family:'DM Sans',sans-serif; }
+.win-log { width:100%; max-width:300px; margin-bottom:24px; }
+.win-log-title { font-size:0.72rem; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:10px; }
+.win-log-entry { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid rgba(250,240,230,0.08); font-size:0.78rem; color:var(--beige); }
+.win-log-entry:last-child { border-bottom:none; }
+.win-log-date { color:var(--muted); font-size:0.72rem; }
 </style>
 </head>
 <body>
@@ -176,6 +181,7 @@ body { font-family:'DM Sans',sans-serif; background:var(--beige); color:var(--br
   <div class="win-h">Day <em>done.</em><br>You showed up.</div>
   <p class="win-sub">Every action today builds trust, visibility and momentum toward your first sale.</p>
   <div class="win-box"><div class="win-num" id="winNum">1</div><div class="win-lbl">day streak 🔥</div></div>
+  <div class="win-log" id="winLog"></div>
   <button class="btn-win" onclick="newDay()">New Day</button>
 </div>
 
@@ -198,16 +204,16 @@ var SCRIPTS = {
     "The 3 WhatsApp replies that close the most sales:\n\n1. The price reply that does not just say it depends\n2. The follow-up that does not feel pushy\n3. The complaint reply that turns angry into loyal\n\nAll 3 plus 93 more in The Reply Vault - R120 at selar.co/237dq65411"
   ],
   vault_pinterest: [
-    "Pin title: 5 WhatsApp Mistakes Costing SA Small Businesses Sales\n\nPoints to include:\n- Replying hours later\n- No saved replies for common questions\n- Never following up on quiet leads\n- No clear next step at end of chat\n- Sending voice notes when text is faster\n\nDescription: Fix all 5. The Reply Vault: 96 WhatsApp templates. selar.co/237dq65411",
-    "Pin title: What to Say When a Customer Asks Your Price on WhatsApp\n\nBody: Most businesses fumble the price question. Here is an exact script that works.\n\nDescription: 96 ready-made WhatsApp replies for SA small businesses. The Reply Vault - R120. selar.co/237dq65411",
-    "Pin title: How to Never Lose a WhatsApp Sale Again\n\nBody: The 3-message system that keeps leads warm even when they go quiet.\n\nDescription: Get 96 copy-paste templates for every customer situation. The Reply Vault at selar.co/237dq65411",
-    "Pin title: The WhatsApp Follow-Up Message That Recovers Lost Sales\n\nBody: Most SA businesses never follow up. This one message changes everything.\n\nDescription: The Reply Vault - 96 WhatsApp templates for small businesses. R120 once-off at selar.co/237dq65411"
+    { tip: "Create a text-on-background Canva pin. Title: '5 WhatsApp Mistakes Costing SA Small Businesses Sales'", copy: "5 WhatsApp Mistakes Costing SA Small Businesses Sales\n\n• Replying hours later\n• No saved replies for common questions\n• Never following up on quiet leads\n• No clear next step at end of chat\n• Sending voice notes when text is faster\n\nFix all 5. The Reply Vault: 96 WhatsApp templates. selar.co/237dq65411" },
+    { tip: "Create a pin with bold text overlay. Title: 'What to Say When a Customer Asks Your Price on WhatsApp'", copy: "What to Say When a Customer Asks Your Price on WhatsApp\n\nMost businesses fumble the price question. Here is an exact script that works.\n\n96 ready-made WhatsApp replies for SA small businesses. The Reply Vault - R120. selar.co/237dq65411" },
+    { tip: "Create a pin. Title: 'How to Never Lose a WhatsApp Sale Again'", copy: "How to Never Lose a WhatsApp Sale Again\n\nThe 3-message system that keeps leads warm even when they go quiet.\n\nGet 96 copy-paste templates for every customer situation. The Reply Vault at selar.co/237dq65411" },
+    { tip: "Create a pin. Title: 'The WhatsApp Follow-Up Message That Recovers Lost Sales'", copy: "The WhatsApp Follow-Up Message That Recovers Lost Sales\n\nMost SA businesses never follow up. This one message changes everything.\n\nThe Reply Vault - 96 WhatsApp templates for small businesses. R120 once-off at selar.co/237dq65411" }
   ],
   inbox_fb: [
-    "Look for posts with: how do I manage my messages / so many enquiries / WhatsApp is overwhelming\n\nReply with specific genuine advice about their situation.\n\nEnd naturally if it fits:\nI actually audit inboxes for free if you ever want a second pair of eyes on yours",
-    "Look for: business owners venting about missing messages or slow responses.\n\nShare one specific tip relevant to their problem - saved replies, labels, away messages.\n\nBe Zondra the person not a brand. Trust builds first.",
-    "Find someone asking how to manage Facebook comments or DMs.\n\nTell them exactly: reply to every comment within the hour, move interested people to DM with I will send you the details now.\n\nThat one tip alone can double their lead conversion.",
-    "Look for posts about losing customers or slow business.\n\nAsk them: Have you checked if your WhatsApp greeting message is set up? It is the first thing customers see.\n\nSimple, helpful, specific. Opens the door to a real conversation."
+    { tip: "Look for posts: 'how do I manage my messages' / 'so many enquiries' / 'WhatsApp is overwhelming'", copy: "I actually audit WhatsApp and Facebook inboxes for free — happy to give you a second pair of eyes on yours if that would help. No catch, just a genuine look at what is and is not working." },
+    { tip: "Look for: business owners venting about missing messages or slow responses.", copy: "The quickest win I can share: set up a saved reply for your most common question right now. Takes 2 minutes in WhatsApp Business and saves you hours over the week." },
+    { tip: "Find someone asking how to manage Facebook comments or DMs.", copy: "One thing that made a real difference for me: reply to every comment within the hour and move interested people to DM with 'I will send you the details now.' That alone can double how many leads you actually convert." },
+    { tip: "Look for posts about losing customers or slow business.", copy: "Quick question — is your WhatsApp greeting message set up? It is the first thing a new contact sees. If not, you are missing the easiest win in your whole inbox. Takes 5 minutes to fix." }
   ],
   inbox_threads: [
     "3 signs your WhatsApp inbox is costing you sales\n\nYou reply hours later - customers already moved on\nYou have no saved replies - every message typed from scratch\nYou never follow up - most sales need 2-3 touches\n\nMost small businesses have all three.\n\nFree 15-minute inbox audit - DM me AUDIT or visit: inboxaidepage.netlify.app",
@@ -222,10 +228,16 @@ var SCRIPTS = {
     "Like and comment on 3 posts in your main SA business Facebook group.\n\nNo writing needed. Just be present.\n\nConsistency of presence matters more than perfection of content."
   ],
   nle_pinterest: [
-    "Pin ideas:\n- First foods for a 6 month old - where we started\n- Signs your baby is ready for solids\n- Gem squash puree - SA baby food step by step\n\nKeep it specific, practical, South African.\nLink to your Selar page once products are live.",
-    "Pin ideas:\n- Baby led weaning vs purees - what worked for us\n- Iron-rich foods for SA babies\n- Pap for babies - when and how to introduce it\n\nEducational content builds your NLE audience passively for months.",
-    "Pin ideas:\n- How to introduce allergenic foods safely\n- Baby food combinations that work at 7 months\n- What I wish I knew about starting solids\n\nPersonal, real, South African context. That is what stands out.",
-    "Pin ideas:\n- 6 month baby meal plan - simple and affordable\n- SA fruits for babies - what is in season\n- Butternut puree for babies - how to make it\n\nSeasonal content gets saved and reshared. Pin it now, it works for months."
+    { tip: "Pick one of these pin ideas for today.", copy: "First foods for a 6 month old - where we started\n\nWe kept it simple: gem squash, butternut, and pap. SA babies do not need fancy imported pouches.\n\nReal food. Real results. Follow for more SA baby feeding tips." },
+    { tip: "Educational pin - these build your audience passively for months.", copy: "Signs your baby is ready for solids\n\n• Sits with support\n• Lost the tongue-thrust reflex\n• Shows interest in what you are eating\n• Can hold their head steady\n\nEvery baby is different. Trust your instincts. Follow for more." },
+    { tip: "Personal, real content. South African context is what stands out.", copy: "What I wish I knew about starting solids\n\nYou do not need variety at every meal. Babies need safe, repeated exposure to the same foods — not a new meal every day.\n\nKeep it simple. Keep it local. Follow for more SA baby feeding tips." },
+    { tip: "Seasonal content gets saved and reshared - pin this, it works for months.", copy: "6 month baby meal plan - simple and affordable\n\nWeek 1: Butternut puree\nWeek 2: Gem squash\nWeek 3: Pap and veg\nWeek 4: Banana and avocado\n\nEverything from Pick n Pay under R50 a week. Follow for more." }
+  ],
+  warm_lead: [
+    { tip: "Your warm beauty business lead — engage with her content today.", copy: "Like or comment on her most recent post. Be genuine. No selling. Just presence. Then move on." },
+    { tip: "She has not heard from you in a few days — time to be visible.", copy: "React to her Story or comment on something specific she posted. One sentence. Make it real." },
+    { tip: "Think about what she is struggling with right now in her inbox.", copy: "Find a post she made about customers or business. Leave a helpful, specific comment. Not about you." },
+    { tip: "She needs to see your name enough times to feel familiar before she ever considers the audit.", copy: "Share something useful on your own profile that she would find valuable. She will see it. Do not tag her." }
   ]
 };
 
@@ -320,9 +332,11 @@ var ACTIONS = {
     { product:'inbox', pName:'Inbox Aide SA', pGoal:'First audit request', plat:'threads', platLbl:'Threads', title:'Post one inbox tip on Threads', desc:'Short, punchy, one idea. No graphic needed.', time:'8 min', scriptKey:'inbox_threads' }
   ],
   low: [
-    { product:'vault', pName:'The Reply Vault', pGoal:'Stay visible', plat:'all', platLbl:'WhatsApp Status', title:'Post Selar link on WhatsApp Status', desc:'One line of text plus your link. 60 seconds. Every contact sees it.', time:'2 min', scriptKey:'vault_wa' },
+    { product:'vault', pName:'The Reply Vault', pGoal:'Stay visible', plat:'all', platLbl:'WhatsApp Status', title:'Post Selar link on WhatsApp Status', desc:'One line of text plus your link. 60 seconds. Every warm contact sees it.', time:'2 min', scriptKey:'vault_wa' },
     { product:'inbox', pName:'Inbox Aide SA', pGoal:'Stay visible', plat:'fb', platLbl:'Facebook Group', title:'Like and comment on 3 posts', desc:'No writing required. Just be present. Your name stays visible.', time:'5 min', scriptKey:'inbox_low' },
-    { product:'inbox', pName:'Inbox Aide SA', pGoal:'Stay visible', plat:'threads', platLbl:'Threads', title:'Reply to one post about business struggles', desc:'Find someone venting about customers or running alone. Leave one kind relatable reply.', time:'5 min', scriptKey:'inbox_threads' }
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'Stay visible', plat:'threads', platLbl:'Threads', title:'Reply to one post about business struggles', desc:'Find someone venting about customers or running alone. Leave one kind relatable reply.', time:'5 min', scriptKey:'inbox_threads' },
+    { product:'inbox', pName:'Inbox Aide SA', pGoal:'Warm lead', plat:'fb', platLbl:'Facebook', title:'Engage with your warm lead today', desc:'One like, comment, or reaction on her content. No pitch. Just presence.', time:'2 min', scriptKey:'warm_lead' },
+    { product:'nle', pName:'Nurturing Little Eaters', pGoal:'Build audience', plat:'pinterest', platLbl:'Pinterest', title:'Save one existing pin to a NLE board', desc:'Find a baby feeding pin worth saving. No creation needed — just show up on Pinterest.', time:'3 min', scriptKey:'nle_pinterest' }
   ]
 };
 
@@ -369,6 +383,8 @@ function pickMood(m) {
   buildActions();
   show('actionsScreen');
 }
+
+var scriptShuffles = {};
 
 function buildActions() {
   var items = ACTIONS[currentMood];
@@ -421,29 +437,75 @@ function buildActions() {
       inner.className = 'act-inner';
       inner.innerHTML = '<span class="plat ' + pc + '">' + a.platLbl + '</span><div class="act-ttl">' + a.title + '</div><div class="act-desc">' + a.desc + '</div><div class="act-time">' + a.time + '</div>';
 
-      if (script) {
+      if (script !== null && script !== undefined) {
+        var scriptKey = a.scriptKey;
+        var cardId = 'card_' + a._idx;
+        if (!scriptShuffles[cardId]) scriptShuffles[cardId] = offset;
+
+        var scriptBtnRow = document.createElement('div');
+        scriptBtnRow.style.cssText = 'display:flex;gap:6px;margin-top:10px;align-items:center;';
+
         var scriptBtn = document.createElement('button');
         scriptBtn.className = 'script-btn';
-        scriptBtn.textContent = "Show script";
+        scriptBtn.style.cssText = 'flex:1;margin-top:0;';
+        scriptBtn.textContent = "Show post";
         var scriptBox = document.createElement('div');
         scriptBox.className = 'script-box';
-        scriptBox.textContent = script;
-        var copyBtn = document.createElement('button');
-        copyBtn.className = 'copy-btn';
-        copyBtn.textContent = 'Copy script';
-        var capturedScript = script;
-        copyBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          copyText(capturedScript, copyBtn);
-        });
-        scriptBox.appendChild(copyBtn);
+
+        function renderScript(box, key, shuffleOffset) {
+          var s = pickScript(key, shuffleOffset);
+          if (!s) return;
+          box.innerHTML = '';
+          var tipText = (typeof s === 'object') ? s.tip : null;
+          var copyContent = (typeof s === 'object') ? s.copy : s;
+          if (tipText) {
+            var tipEl = document.createElement('div');
+            tipEl.style.cssText = 'font-size:0.72rem;color:var(--muted);font-style:italic;margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--border);';
+            tipEl.textContent = '📌 ' + tipText;
+            box.appendChild(tipEl);
+          }
+          var copyEl = document.createElement('div');
+          copyEl.style.cssText = 'white-space:pre-wrap;';
+          copyEl.textContent = copyContent;
+          box.appendChild(copyEl);
+          var copyBtn = document.createElement('button');
+          copyBtn.className = 'copy-btn';
+          copyBtn.textContent = 'Copy to post';
+          copyBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            copyText(copyContent, copyBtn);
+          });
+          box.appendChild(copyBtn);
+        }
+
+        renderScript(scriptBox, scriptKey, scriptShuffles[cardId]);
+
+        var shuffleBtn = document.createElement('button');
+        shuffleBtn.title = 'Try a different post idea';
+        shuffleBtn.style.cssText = 'padding:7px 10px;background:var(--beige-mid);border:1px dashed var(--border);border-radius:8px;font-size:0.84rem;color:var(--muted);cursor:pointer;flex-shrink:0;';
+        shuffleBtn.textContent = '↻';
+        (function(sBtn, sBox, sKey, cId) {
+          sBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            scriptShuffles[cId] = (scriptShuffles[cId] || 0) + 1;
+            renderScript(sBox, sKey, scriptShuffles[cId]);
+            if (!sBox.classList.contains('open')) {
+              sBox.classList.add('open');
+              scriptBtn.textContent = "Hide post";
+            }
+          });
+        })(shuffleBtn, scriptBox, scriptKey, cardId);
+
         scriptBtn.addEventListener('click', function(e) {
           e.stopPropagation();
           var isOpen = scriptBox.classList.contains('open');
           scriptBox.classList.toggle('open');
-          scriptBtn.textContent = isOpen ? "Show script" : "Hide script";
+          scriptBtn.textContent = isOpen ? "Show post" : "Hide post";
         });
-        inner.appendChild(scriptBtn);
+
+        scriptBtnRow.appendChild(scriptBtn);
+        scriptBtnRow.appendChild(shuffleBtn);
+        inner.appendChild(scriptBtnRow);
         inner.appendChild(scriptBox);
       }
 
@@ -514,7 +576,12 @@ function buildActions() {
     tkCard.appendChild(tkTipEl);
     var tkCopyBtn = document.createElement("button");
     tkCopyBtn.className = "tk-copy";
-    tkCopyBtn.textContent = "Copy full script";
+    tkCopyBtn.textContent = "Copy hook to post";
+    var capturedHook = idea.hook;
+    tkCopyBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      copyText(capturedHook, tkCopyBtn);
+    });
     tkCard.appendChild(tkCopyBtn);
     tkBlock.appendChild(tkCard);
     body.appendChild(tkBlock);
@@ -527,6 +594,17 @@ function toggleAction(idx, card) {
   var i = doneTodayIds.indexOf(idx);
   if (i === -1) doneTodayIds.push(idx); else doneTodayIds.splice(i, 1);
   S['done_' + todayStr()] = doneTodayIds;
+  // Update streak as soon as first action is ticked today
+  if (doneTodayIds.length >= 1) {
+    var t = todayStr();
+    var yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+    var y = yesterday.toISOString().split('T')[0];
+    if (S.lastDone !== t) {
+      if (S.lastDone === y) { S.streak = (S.streak || 0) + 1; }
+      else { S.streak = 1; }
+      S.lastDone = t;
+    }
+  }
   save();
   card.classList.toggle('done');
   card.querySelector('.chk').textContent = doneTodayIds.indexOf(idx) !== -1 ? 'v' : '';
@@ -565,9 +643,33 @@ function dayDone() {
   if (S.lastDone === t) {}
   else if (S.lastDone === y) { S.streak = (S.streak || 0) + 1; }
   else { S.streak = 1; }
-  S.lastDone = t; save();
+  S.lastDone = t;
+  // Save log entry
+  var log = S.log || [];
+  var alreadyLogged = log.some(function(e) { return e.date === t; });
+  if (!alreadyLogged) {
+    log.unshift({ date: t, mood: currentMood, done: doneTodayIds.length });
+    if (log.length > 7) log = log.slice(0, 7);
+    S.log = log;
+  }
+  save();
   document.getElementById('winNum').textContent = S.streak;
+  renderWinLog();
   show('winScreen');
+}
+
+function renderWinLog() {
+  var log = S.log || [];
+  var el = document.getElementById('winLog');
+  if (!log.length) { el.innerHTML = ''; return; }
+  var moodLabel = { high: '⚡ High', medium: '🌤 Medium', low: '🌿 Low' };
+  var html = '<div class="win-log-title">Recent days</div>';
+  log.forEach(function(e) {
+    var d = new Date(e.date + 'T00:00:00');
+    var label = d.toLocaleDateString('en-ZA', { weekday:'short', day:'numeric', month:'short' });
+    html += '<div class="win-log-entry"><span>' + (moodLabel[e.mood] || e.mood) + ' — ' + e.done + ' tasks</span><span class="win-log-date">' + label + '</span></div>';
+  });
+  el.innerHTML = html;
 }
 
 function goBack() { show('moodScreen'); }
